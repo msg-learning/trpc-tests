@@ -1,0 +1,7 @@
+from base-devel:latest as editor
+
+run sudo pacman -Sy --noconfirm \
+    nodejs \
+    npm
+
+workdir /home/rosa/workdir
