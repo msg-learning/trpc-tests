@@ -19,6 +19,7 @@ export default function Posts({ posts }: PostProps) {
 
 export async function getStaticProps() {
   const posts = getSortedPostsData();
+  console.dir(posts);
   return {
     props: { posts },
   };

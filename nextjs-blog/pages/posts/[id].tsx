@@ -30,7 +30,13 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
+export interface Params {
+  params: {
+    id: string;
+  };
+}
+
+export async function getStaticProps({ params }: Params) {
   const post = await getPost(params.id);
   return {
     props: { post },

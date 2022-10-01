@@ -12,7 +12,7 @@ export interface FrontMatterData {
 
 export interface PostData extends FrontMatterData {
   id: string;
-  content?: string;
+  content: string;
 }
 
 const postsDirectory = path.join(process.cwd(), "posts");

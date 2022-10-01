@@ -2,13 +2,23 @@ import Link from "next/link";
 
 import * as S from "./Layout.styles";
 
-export default function Layout({ children }) {
+export interface LayoutProps {
+  children: React.ReactNode;
+}
+
+export default function Layout({ children }: LayoutProps) {
   return (
     <S.Layout>
       <S.Nav>
         <S.Navbar>
           <S.NavbarItem>
             <Link href="/">Home</Link>
+          </S.NavbarItem>
+          <S.NavbarItem>
+            <Link href="/users">Users</Link>
+          </S.NavbarItem>
+          <S.NavbarItem>
+            <Link href="/AddUser">AddUser</Link>
           </S.NavbarItem>
           <S.NavbarItem>
             <Link href="/posts">Posts</Link>
